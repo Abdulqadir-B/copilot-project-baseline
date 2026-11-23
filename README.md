@@ -13,21 +13,7 @@ A small, reusable setup for GitHub Copilot in VS Code. It adds project rules and
 
 ### 1. Copy the setup
 
-Clone or download this repository. In PowerShell, run:
-
-```powershell
-.\setup.ps1 -TargetProject "C:\path\to\your-project"
-```
-
-This copies `.github/copilot-instructions.md` and `.github/skills/project-baseline/SKILL.md` into the target project.
-
-Existing files are kept unchanged. To replace existing setup files deliberately, add `-Force`:
-
-```powershell
-.\setup.ps1 -TargetProject "C:\path\to\your-project" -Force
-```
-
-You can also copy the `.github` folder manually:
+Copy the `.github` folder from this repository into the root of your project.
 
 Your project should now contain:
 
@@ -80,16 +66,12 @@ cd copilot-project-baseline
 code .
 ```
 
-## How the setup is organized
+## Two small files do the work
 
-The setup has two parts:
+- `.github/copilot-instructions.md` gives Copilot rules for every request.
+- `.github/skills/project-baseline/SKILL.md` adds `/project-baseline`.
 
-- `.github/copilot-instructions.md` adds rules that Copilot follows during every chat request.
-- `.github/skills/project-baseline/SKILL.md` provides the `/project-baseline` checklist.
-
-Keep the always-on instructions short. Put larger workflows in separate skill folders under `.github/skills/`.
-
-If `/project-baseline` does not appear, reload VS Code and reopen the project. Confirm that `SKILL.md` is inside `.github/skills/project-baseline/`.
+Keep the first file short. Put larger workflows in `.github/skills/`.
 
 ## Notes
 
