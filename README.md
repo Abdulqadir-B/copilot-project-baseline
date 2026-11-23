@@ -66,15 +66,16 @@ cd copilot-project-baseline
 code .
 ```
 
-## Read the full guide
+## How the setup is organized
 
-See [Copilot Project Baseline Guide](copilot-agent-workflow-guide.md) for:
+The setup has two parts:
 
-- A one-time VS Code setup
-- The folder structure
-- Checklist details
-- Troubleshooting
-- How to customize the rules
+- `.github/copilot-instructions.md` adds rules that Copilot follows during every chat request.
+- `.github/skills/project-baseline/SKILL.md` provides the `/project-baseline` checklist.
+
+Keep the always-on instructions short. Put larger workflows in separate skill folders under `.github/skills/`.
+
+If `/project-baseline` does not appear, reload VS Code and reopen the project. Confirm that `SKILL.md` is inside `.github/skills/project-baseline/`.
 
 ## Notes
 

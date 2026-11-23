@@ -3,8 +3,6 @@
 !.env.example
 
 .vscode/
-.copilot/
-
 node_modules/
 dist/
 build/
