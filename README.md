@@ -13,7 +13,21 @@ A small, reusable setup for GitHub Copilot in VS Code. It adds project rules and
 
 ### 1. Copy the setup
 
-Copy the `.github` folder from this repository into the root of your project.
+Clone or download this repository. In PowerShell, run:
+
+```powershell
+.\setup.ps1 -TargetProject "C:\path\to\your-project"
+```
+
+This copies `.github/copilot-instructions.md` and `.github/skills/project-baseline/SKILL.md` into the target project.
+
+Existing files are kept unchanged. To replace existing setup files deliberately, add `-Force`:
+
+```powershell
+.\setup.ps1 -TargetProject "C:\path\to\your-project" -Force
+```
+
+You can also copy the `.github` folder manually:
 
 Your project should now contain:
 
